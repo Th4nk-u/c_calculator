@@ -1,0 +1,3 @@
+Population UK: 67330000
+Population France: 67750000
+Population Australia: 25690000

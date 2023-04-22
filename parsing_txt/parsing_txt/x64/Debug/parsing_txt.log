@@ -1,0 +1,3 @@
+﻿  parsing_txt.cpp
+C:\Users\User\Documents\c++ steps\parsing_txt\parsing_txt\parsing_txt.cpp(14,9): warning C4101: 'population': unreferenced local variable
+  parsing_txt.vcxproj -> C:\Users\User\Documents\c++ steps\parsing_txt\parsing_txt\x64\Debug\parsing_txt.exe
