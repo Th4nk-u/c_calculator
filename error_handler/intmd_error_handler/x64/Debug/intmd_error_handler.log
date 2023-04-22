@@ -1,0 +1,3 @@
+﻿  intmd_error_handler.cpp
+C:\Users\User\Documents\c++ steps\error_handler\intmd_error_handler\intmd_error_handler.cpp(20,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  intmd_error_handler.vcxproj -> C:\Users\User\Documents\c++ steps\error_handler\intmd_error_handler\x64\Debug\intmd_error_handler.exe
