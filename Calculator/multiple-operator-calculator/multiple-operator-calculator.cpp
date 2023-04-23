@@ -5,6 +5,10 @@ using namespace std;
 
 class Calculator {
 public:
+
+    string input_;
+    size_t pos_;
+
     Calculator(const string& input) : input_(input), pos_(0) {}
 
     // Evaluate the arithmetic expression and return the result.
@@ -16,7 +20,6 @@ public:
         if (pos_ < input_.size()) {
             throw runtime_error("Invalid expression");
         }
-
         return result;
     }
 
@@ -43,7 +46,6 @@ private:
                 left -= right;
             }
         }
-
         // Return the final result.
         return left;
     }
@@ -70,7 +72,6 @@ private:
                 left /= right;
             }
         }
-
         // Return the final result.
         return left;
     }
@@ -109,18 +110,23 @@ private:
             while (pos_ < input_.size() && isdigit(input_[pos_])) {
                 pos_++;
             }
+            //double.. throw error
+            if (pos_ < input_.size() && input_[pos_] == '.') {
+                throw "input error";
+            }
         }
 
         // Extract the number as a substring and convert it to a double.
         return stod(input_.substr(start, pos_ - start));
     }
 
-    string input_;
-    size_t pos_;
+
 };
 
 int main() {
+    
     string input;
+
     cout << "Enter an arithmetic expression: ";
     getline(cin, input);
 
@@ -131,6 +137,11 @@ int main() {
     }
     catch (const exception& e) {
         cerr << e.what() << endl;
+    }
+
+    catch (const char* txtException)
+    {
+        cout << "exception: " << txtException << endl;
     }
 
     return 0;
